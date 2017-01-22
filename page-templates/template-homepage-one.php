@@ -115,7 +115,7 @@ get_header(); ?>
 								<?php
 								}
 							}
-							wp_reset_postdata(); ?>                         
+							wp_reset_postdata(); ?>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,8 @@ get_header(); ?>
 
 			<div id="primary" class="content-area homepage-one">
 				<main id="main" class="site-main">
-				<?php
+				<!--
+        <?php
 				$themotion_home_a_bottom_posts_title = get_theme_mod( 'themotion_home_a_bottom_posts_title',esc_html__( 'Recently Posted','themotion-lite' ) );
 				if ( ! empty( $themotion_home_a_bottom_posts_title ) ) { ?>
 					<h3 class="recently-posted-title"><?php if ( ! empty( $themotion_home_a_bottom_posts_title ) ) { echo wp_kses_post( $themotion_home_a_bottom_posts_title ); } ?></h3>
@@ -149,7 +150,7 @@ get_header(); ?>
 					}
 				}
 				?>
-
+        -->
 				<div class="recently-posted-wrap">
 					<?php
 					$themotion_home_a_post_nb = get_theme_mod( 'themotion_home_a_post_nb', 6 );
