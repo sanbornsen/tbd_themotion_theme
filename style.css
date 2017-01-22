@@ -2456,8 +2456,7 @@ button.search-opt {
 }
 
 .themotion-playlist-tracks {
-	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow: hidden;
 	width: 100%;
 	max-height: 283px;
 	margin-top: 0 !important;
