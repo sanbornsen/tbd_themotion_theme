@@ -2468,6 +2468,16 @@ button.search-opt {
 	width: 0 !important;
 }
 
+/**
+  Not showing featured section in mobile
+**/
+@media (max-width: 480px) {
+  .themotion-playlist {
+    display: none;
+  }
+}
+
+
 /*This is a fix for hiding playlist scroll bar on safari ios9. */
 @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
 	.themotion-playlist-tracks {
