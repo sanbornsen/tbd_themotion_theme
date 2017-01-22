@@ -137,7 +137,7 @@ get_header(); ?>
 
 			<div id="primary" class="content-area homepage-one">
 				<main id="main" class="site-main">
-				<!--
+
         <?php
 				$themotion_home_a_bottom_posts_title = get_theme_mod( 'themotion_home_a_bottom_posts_title',esc_html__( 'Recently Posted','themotion-lite' ) );
 				if ( ! empty( $themotion_home_a_bottom_posts_title ) ) { ?>
@@ -150,7 +150,7 @@ get_header(); ?>
 					}
 				}
 				?>
-        -->
+
 				<div class="recently-posted-wrap">
 					<?php
 					$themotion_home_a_post_nb = get_theme_mod( 'themotion_home_a_post_nb', 6 );
