@@ -447,13 +447,13 @@ function themotion_get_thumbnail_url( $post_id ) {
 
 	if ( $youtube_id ) {
 		// Check to see if our max-res image exists.
-		$remote_headers = wp_remote_head( 'http://img.youtube.com/vi/' . $youtube_id . '/maxresdefault.jpg' );
+		$remote_headers = wp_remote_head( '//img.youtube.com/vi/' . $youtube_id . '/maxresdefault.jpg' );
 		$is_404 = ( 404 === wp_remote_retrieve_response_code( $remote_headers ) );
-		$video_thumbnail_url = ( ! $is_404 ) ? 'http://img.youtube.com/vi/' . $youtube_id . '/mqdefault.jpg' : 'http://img.youtube.com/vi/' . $youtube_id . '/sddefault.jpg';
+		$video_thumbnail_url = ( ! $is_404 ) ? '//img.youtube.com/vi/' . $youtube_id . '/mqdefault.jpg' : 'http://img.youtube.com/vi/' . $youtube_id . '/sddefault.jpg';
 
 	} elseif ( $vimeo_id ) {
 
-		$vimeo_data = wp_remote_get( 'http://www.vimeo.com/api/v2/video/' . intval( $vimeo_id ) . '.php' );
+		$vimeo_data = wp_remote_get( '//www.vimeo.com/api/v2/video/' . intval( $vimeo_id ) . '.php' );
 		if ( isset( $vimeo_data['response']['code'] ) && '200' == $vimeo_data['response']['code'] ) {
 			$response = unserialize( $vimeo_data['body'] );
 			$video_thumbnail_url = isset( $response[0]['thumbnail_large'] ) ? $response[0]['thumbnail_large'] : false;
